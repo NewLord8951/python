@@ -32,3 +32,4 @@
     - Добавление новых функций (инженерный режим)
 
 
+<img width="2041" height="3074" alt="deepseek_mermaid_20250902_eb1d78" src="https://github.com/user-attachments/assets/c6aa5e4a-9211-40b5-a7d9-d45b850541c4" />
