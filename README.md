@@ -30,3 +30,5 @@
  ### 6. 📞 Поддержка
     - Исправление багов
     - Добавление новых функций (инженерный режим)
+
+<img width="2041" height="3074" alt="deepseek_mermaid_20250902_eb1d78 (1)" src="https://github.com/user-attachments/assets/723dcb77-db1b-482e-ad72-0c98719d5574" />
