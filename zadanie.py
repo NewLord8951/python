@@ -62,35 +62,30 @@ class CodeAnalyzer:
                     stripped_line = line.strip()
                     
                     if not stripped_line:
-                        continue  # Пропускаем пустые строки
+                        continue
                     
-                    # Обработка многострочных комментариев
                     if in_multiline_comment:
                         if '*/' in stripped_line:
                             in_multiline_comment = False
-                            # Проверяем, есть ли код после комментария
                             after_comment = stripped_line.split('*/')[-1].strip()
                             if after_comment and not after_comment.startswith('//'):
                                 code_lines += 1
                         continue
                     
-                    # Проверка начала многострочного комментария
                     if '/*' in stripped_line:
                         in_multiline_comment = True
-                        # Проверяем, есть ли код до комментария
                         before_comment = stripped_line.split('/*')[0].strip()
                         if before_comment:
                             code_lines += 1
                         continue
                     
-                    # Игнорируем однострочные комментарии
+
                     if (stripped_line.startswith(('//', '#', '--')) or 
                         stripped_line.startswith('/*') or 
                         stripped_line.startswith('*') or
                         stripped_line.startswith('<!--')):
                         continue
-                    
-                    # Если дошли сюда - это строка с кодом
+
                     code_lines += 1
         
         except (IOError, UnicodeDecodeError) as e:
@@ -117,8 +112,7 @@ class CodeAnalyzer:
     def analyze_directory(self, project_path: str, extensions: Optional[List[str]] = None) -> Dict:
         if extensions is None:
             extensions = self.default_extensions
-        
-        # Нормализуем расширения (добавляем точку если нужно)
+
         normalized_extensions = []
         for ext in extensions:
             if not ext.startswith('.'):
@@ -131,7 +125,6 @@ class CodeAnalyzer:
         if not project_path.is_dir():
             raise ValueError(f"Путь {project_path} не является директорией")
         
-        # Инициализация статистики
         extension_stats = {ext: ExtensionStats(
             extension=ext,
             file_count=0,
@@ -150,7 +143,6 @@ class CodeAnalyzer:
         
         print("Сканирование файлов...")
         
-        # Рекурсивный обход директории
         for file_path in project_path.rglob('*'):
             if file_path.is_file() and self.is_code_file(file_path, normalized_extensions):
                 file_stats = self.analyze_file(file_path)
@@ -172,18 +164,16 @@ class CodeAnalyzer:
                     stats.total_lines += file_stats.total_lines
                     stats.code_lines += file_stats.code_lines
                     stats.total_size_kb += file_stats.size_kb
-                    
-                    # Обновляем самый большой файл
+
                     if file_stats.total_lines > stats.max_lines_count:
                         stats.max_lines_count = file_stats.total_lines
                         stats.max_lines_file = file_path
                 
                 total_files += 1
-                total_size_mb += file_stats.size_kb / 1024  # Конвертируем в MB
+                total_size_mb += file_stats.size_kb / 1024
                 total_lines += file_stats.total_lines
                 total_code_lines += file_stats.code_lines
-        
-        # Подготовка результатов
+
         result = {
             'project_path': str(project_path.absolute()),
             'total_files': total_files,
@@ -258,22 +248,22 @@ def main():
     analyzer = CodeAnalyzer()
     
     try:
-        print("🚀 Запуск анализа кодовой базы...")
+        print("Запуск анализа кодовой базы...")
         result = analyzer.analyze_directory(args.project_path, args.extensions)
         
         analyzer.print_report(result)
         analyzer.save_to_json(result, args.output)
         
-        print("\n✅ Анализ завершен успешно!")
+        print("\n Анализ завершен успешно!")
         
     except ValueError as e:
-        print(f"❌ Ошибка: {e}")
+        print(f" Ошибка: {e}")
         sys.exit(1)
     except KeyboardInterrupt:
-        print("\n⏹️  Анализ прерван пользователем")
+        print("\n Анализ прерван пользователем")
         sys.exit(1)
     except Exception as e:
-        print(f"❌ Неожиданная ошибка: {e}")
+        print(f" Неожиданная ошибка: {e}")
         sys.exit(1)
 
 if __name__ == "__main__":
