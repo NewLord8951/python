@@ -1,5 +1,6 @@
 import json
 
+
 # 1. Переменные
 name = "Софья"
 age = 15
