@@ -40,7 +40,7 @@ for vacancy in data['items']:
             salary_info = "не указана"
     else:
         salary_info = "не указана"
-    
+
     print(f"📌 {vacancy['name']} | {salary_info}")
 
 # 3. Сохранение в JSON
