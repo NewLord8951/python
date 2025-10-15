@@ -1,0 +1,123 @@
+2025-10-15 12:49:50,235 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 12:50:00,821 - INFO - Мониторинг остановлен пользователем
+2025-10-15 12:52:44,853 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 12:52:44,856 - ERROR - 192.168.88.164 - FAILED: Invalid URL '192.168.88.164': No scheme supplied. Perhaps you meant https://192.168.88.164?
+2025-10-15 12:52:44,857 - ERROR - 192.168.88.164 - FAILED: Invalid URL '192.168.88.164': No scheme supplied. Perhaps you meant https://192.168.88.164?
+2025-10-15 12:52:44,858 - ERROR - 192.168.88.164 - FAILED: Invalid URL '192.168.88.164': No scheme supplied. Perhaps you meant https://192.168.88.164?
+2025-10-15 12:53:02,216 - INFO - Мониторинг остановлен пользователем
+2025-10-15 12:53:06,564 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 12:53:06,566 - ERROR - 192.168.88.1 - FAILED: Invalid URL '192.168.88.1': No scheme supplied. Perhaps you meant https://192.168.88.1?
+2025-10-15 12:53:06,567 - ERROR - 192.168.88.1 - FAILED: Invalid URL '192.168.88.1': No scheme supplied. Perhaps you meant https://192.168.88.1?
+2025-10-15 12:53:06,568 - ERROR - 192.168.88.1 - FAILED: Invalid URL '192.168.88.1': No scheme supplied. Perhaps you meant https://192.168.88.1?
+2025-10-15 12:53:12,143 - INFO - Мониторинг остановлен пользователем
+2025-10-15 12:54:13,745 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 12:54:14,312 - ERROR - https://httpbin.org/status/200 - FAILED: Status 503
+2025-10-15 12:54:14,825 - ERROR - https://httpbin.org/status/404 - FAILED: Status 503
+2025-10-15 12:54:18,862 - ERROR - http://localhost:8080 - FAILED: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001979397ACF0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2025-10-15 12:54:40,479 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:01:05,815 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:01:21,767 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:04:33,152 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:04:34,658 - INFO - https://httpbin.org/status/200 - OK (1.51s)
+2025-10-15 13:04:38,551 - INFO - https://httpbin.org/status/404 - OK (3.89s)
+2025-10-15 13:04:42,572 - ERROR - http://localhost:8080 - FAILED: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000255EE3DABA0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2025-10-15 13:04:54,959 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:04:55,004 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:04:59,923 - INFO - https://httpbin.org/status/200 - OK (4.92s)
+2025-10-15 13:05:05,331 - ERROR - https://httpbin.org/status/404 - FAILED: HTTPSConnectionPool(host='httpbin.org', port=443): Read timed out. (read timeout=5)
+2025-10-15 13:05:09,363 - ERROR - http://localhost:8080 - FAILED: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000255EE3AA850>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2025-10-15 13:05:40,962 - INFO - https://httpbin.org/status/200 - OK (1.60s)
+2025-10-15 13:05:43,552 - INFO - https://httpbin.org/status/404 - OK (2.59s)
+2025-10-15 13:05:47,598 - ERROR - http://localhost:8080 - FAILED: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000255EE3A9590>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2025-10-15 13:06:22,995 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:06:22,999 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:06:24,841 - INFO - https://httpbin.org/status/200 - OK (1.84s)
+2025-10-15 13:06:26,256 - INFO - https://httpbin.org/status/404 - OK (1.41s)
+2025-10-15 13:06:30,317 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:06:30,320 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:06:30,457 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:06:30,461 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:06:30,583 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:06:30,587 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:06:30,724 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:06:30,727 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:06:30,864 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:06:30,868 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:06:31,006 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:06:31,009 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:06:31,147 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:06:31,150 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:06:31,287 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:06:31,291 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:06:31,429 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:06:31,432 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:06:31,569 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:06:31,573 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:06:31,712 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:06:31,715 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:06:31,852 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:06:31,855 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:06:31,993 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:06:31,997 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:06:32,135 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:06:32,138 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:06:32,278 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:06:32,281 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:06:32,404 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:06:32,407 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:06:32,544 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:06:32,548 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:06:32,685 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:06:32,689 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:06:33,471 - ERROR - https://httpbin.org/status/200 - FAILED: Status 502
+2025-10-15 13:06:34,043 - INFO - https://httpbin.org/status/404 - OK (0.57s)
+2025-10-15 13:06:39,687 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:06:45,107 - ERROR - https://httpbin.org/status/200 - FAILED: HTTPSConnectionPool(host='httpbin.org', port=443): Read timed out. (read timeout=5)
+2025-10-15 13:06:47,568 - INFO - https://httpbin.org/status/404 - OK (2.46s)
+2025-10-15 13:06:51,611 - ERROR - http://localhost:8080 - FAILED: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000262E765B8C0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2025-10-15 13:07:23,605 - INFO - https://httpbin.org/status/200 - OK (1.99s)
+2025-10-15 13:07:25,692 - INFO - https://httpbin.org/status/404 - OK (2.09s)
+2025-10-15 13:07:29,715 - ERROR - http://localhost:8080 - FAILED: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000262E762AC10>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2025-10-15 13:08:00,553 - INFO - https://httpbin.org/status/200 - OK (0.84s)
+2025-10-15 13:08:02,593 - INFO - https://httpbin.org/status/404 - OK (2.04s)
+2025-10-15 13:08:06,634 - ERROR - http://localhost:8080 - FAILED: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000262E762A710>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2025-10-15 13:08:38,368 - INFO - https://httpbin.org/status/200 - OK (1.73s)
+2025-10-15 13:08:40,759 - INFO - https://httpbin.org/status/404 - OK (2.39s)
+2025-10-15 13:08:44,804 - ERROR - http://localhost:8080 - FAILED: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000262E764AB10>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2025-10-15 13:09:16,413 - INFO - https://httpbin.org/status/200 - OK (1.61s)
+2025-10-15 13:09:19,072 - INFO - https://httpbin.org/status/404 - OK (2.66s)
+2025-10-15 13:09:23,130 - ERROR - http://localhost:8080 - FAILED: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000262E764A650>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2025-10-15 13:09:54,463 - INFO - https://httpbin.org/status/200 - OK (1.33s)
+2025-10-15 13:09:59,862 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:09:59,866 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:10:05,281 - ERROR - https://httpbin.org/status/200 - FAILED: HTTPSConnectionPool(host='httpbin.org', port=443): Read timed out. (read timeout=5)
+2025-10-15 13:10:07,793 - INFO - https://httpbin.org/status/404 - OK (2.51s)
+2025-10-15 13:10:11,852 - ERROR - http://localhost:8080 - FAILED: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000262E76ED490>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2025-10-15 13:10:26,128 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:10:27,825 - INFO - https://httpbin.org/status/200 - OK (1.70s)
+2025-10-15 13:10:28,453 - INFO - https://httpbin.org/status/404 - OK (0.63s)
+2025-10-15 13:10:32,502 - ERROR - http://localhost:8080 - FAILED: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A4FFA6ABA0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2025-10-15 13:11:03,153 - INFO - https://httpbin.org/status/200 - OK (0.65s)
+2025-10-15 13:11:05,102 - INFO - https://httpbin.org/status/404 - OK (1.95s)
+2025-10-15 13:11:09,165 - ERROR - http://localhost:8080 - FAILED: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A4FFA3A850>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2025-10-15 13:11:40,255 - INFO - https://httpbin.org/status/200 - OK (1.09s)
+2025-10-15 13:11:42,457 - INFO - https://httpbin.org/status/404 - OK (2.20s)
+2025-10-15 13:11:46,511 - ERROR - http://localhost:8080 - FAILED: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A4FFA39E50>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2025-10-15 13:12:21,909 - ERROR - https://httpbin.org/status/200 - FAILED: HTTPSConnectionPool(host='httpbin.org', port=443): Read timed out. (read timeout=5)
+2025-10-15 13:12:27,325 - ERROR - https://httpbin.org/status/404 - FAILED: HTTPSConnectionPool(host='httpbin.org', port=443): Read timed out. (read timeout=5)
+2025-10-15 13:12:31,384 - ERROR - http://localhost:8080 - FAILED: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A4FFA5A8B0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2025-10-15 13:13:02,523 - INFO - https://httpbin.org/status/200 - OK (1.14s)
+2025-10-15 13:13:07,930 - ERROR - https://httpbin.org/status/404 - FAILED: HTTPSConnectionPool(host='httpbin.org', port=443): Read timed out. (read timeout=5)
+2025-10-15 13:13:11,978 - ERROR - http://localhost:8080 - FAILED: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A4FFA5AFD0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2025-10-15 13:13:43,402 - INFO - https://httpbin.org/status/200 - OK (1.42s)
+2025-10-15 13:13:44,695 - INFO - https://httpbin.org/status/404 - OK (1.29s)
+2025-10-15 13:13:48,749 - ERROR - http://localhost:8080 - FAILED: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A4FFAFCA70>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2025-10-15 13:14:19,358 - INFO - https://httpbin.org/status/200 - OK (0.61s)
+2025-10-15 13:14:24,764 - ERROR - https://httpbin.org/status/404 - FAILED: HTTPSConnectionPool(host='httpbin.org', port=443): Read timed out. (read timeout=5)
+2025-10-15 13:14:28,807 - ERROR - http://localhost:8080 - FAILED: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A4FFAF0F30>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2025-10-15 13:15:00,011 - INFO - https://httpbin.org/status/200 - OK (1.20s)
+2025-10-15 13:15:01,204 - INFO - https://httpbin.org/status/404 - OK (1.19s)
+2025-10-15 13:15:05,243 - ERROR - http://localhost:8080 - FAILED: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A4FFAF1260>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2025-10-15 13:15:27,368 - INFO - Мониторинг остановлен пользователем
+2025-10-15 13:15:27,372 - INFO - Запуск мониторинга веб-интерфейсов...
+2025-10-15 13:15:29,364 - INFO - https://httpbin.org/status/200 - OK (1.99s)
