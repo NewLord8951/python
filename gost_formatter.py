@@ -14,6 +14,7 @@ FORMAT_RULES = {
     'first_line_indent': 1.25
 }
 
+
 def add_page_number(doc):
     """Добавляет номера страниц с 3-й страницы"""
     sections = doc.sections
@@ -55,17 +56,60 @@ def set_margins(doc):
 
 
 def create_title_page(doc, topic: str):
-    doc.add_paragraph().add_run("\n\n\n")
-    title = doc.add_paragraph()
-    title.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    title.add_run("НАЗВАНИЕ ВУЗА\n").bold = True
-    title.add_run("Кафедра информационных технологий\n\n").bold = True
-    title.add_run("ДОКЛАД\n").bold = True
-    title.add_run(f'по теме: "{topic}"\n\n\n').bold = True
-    title.add_run("Выполнил: студент гр. XYZ\n")
-    title.add_run("Проверил: доцент Иванов И.И.\n\n\n")
-    title.add_run("Москва 2024").bold = True
-    doc.add_page_break()
+    # Очистка стиля: без отступов и выравнивание по центру
+    section = doc.sections[0]
+    section.page_height = Cm(29.7)  # A4
+    section.page_width = Cm(21)
+    
+    # Добавляем текст построчно, как в образце
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p.add_run("АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ ПРОФЕССИОНАЛЬНАЯ ОБРАЗОВАТЕЛЬНАЯ ОРГАНИЗАЦИЯ\n").bold = True
+    p.add_run("МОСКОВСКИЙ МЕЖДУНАРОДНЫЙ КОЛЛЕДЖ ЦИФРОВЫХ ТЕХНОЛОГИЙ\n").bold = True
+    p.add_run("«АКАДЕМИЯ ТОП»\n").bold = True
+
+    doc.add_paragraph()  # пустая строка
+
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p.add_run("ОТЧЁТ\n").bold = True
+
+    doc.add_paragraph()  # пустая строка
+
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+    p.add_run("Уровень профессионального образования:\n")
+    p.add_run("Среднее профессиональное образование\n\n")
+    p.add_run("Программа подготовки специалистов среднего звена по специальности:\n")
+    p.add_run("   09.02.07 Информационные системы и программирование\n\n")
+    p.add_run("Квалификация:  Программист\n")
+    p.add_run("Учебный предмет:  _______________________\n")
+    p.add_run(f"Тема:  {topic}\n")
+    p.add_run("наименование темы\n")
+
+    doc.add_paragraph()  # пустая строка
+
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+    p.add_run("Преподаватель:\n")
+    p.add_run("__________________        _________________\n")
+    p.add_run("                         подпись             инициалы фамилия\n")
+
+    doc.add_paragraph()
+
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+    p.add_run("Обучающийся:\n")
+    p.add_run("__________________        _________________\n")
+    p.add_run("                         подпись дата        инициалы фамилия\n")
+
+    doc.add_paragraph()
+    doc.add_paragraph()
+    doc.add_paragraph()
+
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+    p.add_run("Москва, 2025")
 
 
 def add_table_of_contents(doc):
