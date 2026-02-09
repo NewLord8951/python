@@ -1,0 +1,15 @@
+C:\Users\Student1-4\Downloads\Dz_kurs2\bin\Debug\net9.0\Dz_kurs2.exe
+C:\Users\Student1-4\Downloads\Dz_kurs2\bin\Debug\net9.0\Dz_kurs2.deps.json
+C:\Users\Student1-4\Downloads\Dz_kurs2\bin\Debug\net9.0\Dz_kurs2.runtimeconfig.json
+C:\Users\Student1-4\Downloads\Dz_kurs2\bin\Debug\net9.0\Dz_kurs2.dll
+C:\Users\Student1-4\Downloads\Dz_kurs2\bin\Debug\net9.0\Dz_kurs2.pdb
+C:\Users\Student1-4\Downloads\Dz_kurs2\obj\Debug\net9.0\Dz_kurs2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student1-4\Downloads\Dz_kurs2\obj\Debug\net9.0\Dz_kurs2.AssemblyInfoInputs.cache
+C:\Users\Student1-4\Downloads\Dz_kurs2\obj\Debug\net9.0\Dz_kurs2.AssemblyInfo.cs
+C:\Users\Student1-4\Downloads\Dz_kurs2\obj\Debug\net9.0\Dz_kurs2.csproj.CoreCompileInputs.cache
+C:\Users\Student1-4\Downloads\Dz_kurs2\obj\Debug\net9.0\Dz_kurs2.sourcelink.json
+C:\Users\Student1-4\Downloads\Dz_kurs2\obj\Debug\net9.0\Dz_kurs2.dll
+C:\Users\Student1-4\Downloads\Dz_kurs2\obj\Debug\net9.0\refint\Dz_kurs2.dll
+C:\Users\Student1-4\Downloads\Dz_kurs2\obj\Debug\net9.0\Dz_kurs2.pdb
+C:\Users\Student1-4\Downloads\Dz_kurs2\obj\Debug\net9.0\Dz_kurs2.genruntimeconfig.cache
+C:\Users\Student1-4\Downloads\Dz_kurs2\obj\Debug\net9.0\ref\Dz_kurs2.dll
