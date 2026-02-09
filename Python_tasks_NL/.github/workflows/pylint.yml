@@ -1,0 +1,28 @@
+name: Pylint
+
+on:
+  push:
+    branches: [main, master] # Можно изменить список ветвей
+  pull_request:
+    types: [opened, reopened, synchronized]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]  # Список поддерживаемых версий Python
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Analyze the code with pylint
+      run: |
+        find . -type f -name "*.py" | xargs pylint
+      continue-on-error: false # Важно: остановка сборки при ошибках pylint
