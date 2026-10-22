@@ -1,8 +1,53 @@
 {
   "version": 2,
-  "dgSpecHash": "/6El1zDrRKY=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Student1-3\\Downloads\\python\\Dz_kurs2\\Dz_kurs2.csproj",
+  "dgSpecHash": "I8qodXkRHjY=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\NL8\\Downloads\\python\\Dz_kurs2\\Dz_kurs2.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "Unable to resolve 'Microsoft.NETCore.App.Ref (= 9.0.20)' for 'net9.0'.",
+      "projectPath": "C:\\Users\\NL8\\Downloads\\python\\Dz_kurs2\\Dz_kurs2.csproj",
+      "filePath": "C:\\Users\\NL8\\Downloads\\python\\Dz_kurs2\\Dz_kurs2.csproj",
+      "libraryId": "Microsoft.NETCore.App.Ref",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "Unable to resolve 'Microsoft.WindowsDesktop.App.Ref (= 9.0.20)' for 'net9.0'.",
+      "projectPath": "C:\\Users\\NL8\\Downloads\\python\\Dz_kurs2\\Dz_kurs2.csproj",
+      "filePath": "C:\\Users\\NL8\\Downloads\\python\\Dz_kurs2\\Dz_kurs2.csproj",
+      "libraryId": "Microsoft.WindowsDesktop.App.Ref",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "Unable to resolve 'Microsoft.AspNetCore.App.Ref (= 9.0.20)' for 'net9.0'.",
+      "projectPath": "C:\\Users\\NL8\\Downloads\\python\\Dz_kurs2\\Dz_kurs2.csproj",
+      "filePath": "C:\\Users\\NL8\\Downloads\\python\\Dz_kurs2\\Dz_kurs2.csproj",
+      "libraryId": "Microsoft.AspNetCore.App.Ref",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "Unable to resolve 'Microsoft.NETCore.App.Host.win-x64 (= 9.0.20)' for 'net9.0'.",
+      "projectPath": "C:\\Users\\NL8\\Downloads\\python\\Dz_kurs2\\Dz_kurs2.csproj",
+      "filePath": "C:\\Users\\NL8\\Downloads\\python\\Dz_kurs2\\Dz_kurs2.csproj",
+      "libraryId": "Microsoft.NETCore.App.Host.win-x64",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }
