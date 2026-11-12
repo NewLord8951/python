@@ -22,26 +22,37 @@ class World:
         self.database_create()
 
     def database_create(self):
-        try:
-            self.connection = mysql.connector.connect(
-                host="localhost",
-                user="root",
-                password=os.getenv("password"),
-                database="tkinterbd"
+        self.connection = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password=os.getenv("password"),
+            database="tkinterbd"
+        )
+        cursor = self.connection.cursor()
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS provinces (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                name VARCHAR(100) UNIQUE,
+                recruits INT,
+                money FLOAT
             )
-            cursor = self.connection.cursor()
-            cursor.execute("""
-                CREATE TABLE IF NOT EXISTS provinces (
-                    id INT AUTO_INCREMENT PRIMARY KEY,
-                    name VARCHAR(100),
-                    recruits INT,
-                    money FLOAT
-                )
-            """)
+        """)
+        self.connection.commit()
+        cursor.close()
+
+    def insert_db(self):
+        cursor = self.connection.cursor()
+        cursor.execute("SELECT COUNT(*) FROM provinces")
+        if cursor.fetchone()[0] == 0:
+            cursor.executemany(
+                "INSERT INTO provinces (name, recruits, money) VALUES (%s, %s, %s)",
+                list(zip(*self.prov))
+            )
             self.connection.commit()
-            cursor.close()
-        except mysql.connector.Error as e:
-            print("БД недоступна: ", e)
+        else:
+            cursor.execute("SELECT name, recruits, money FROM provinces ORDER BY id")
+            self.prov = [list(col) for col in zip(*cursor.fetchall())]
+        cursor.close()
 
     def square(self):
         self.cells.delete("all")
@@ -52,64 +63,64 @@ class World:
                     fill="#201F24", outline="#7D7C8A"
                 )
 
-    def click_province(self, x, y, name):
-        self.insert_db(name)
-        self.cells.create_text(
-            x + 59, y + 80,
-            text=f"Добавлено:\n{name}",
-            fill="#B61414",
-            font=("Times New Roman", 10),
-            justify="center"
-        )
-
     def button(self):
         a = 0
+        name = []
+        recruits = []
+        money = []
+        self.prov = [[], [], []]
         for y in range(0, 1080, 120):
             for x in range(0, 1920, 120):
-                a += 1
-                name = f"Провинция {a}"
+                name.append(f"№ {a}")
+                recruits.append(random.randint(100, 1000))
+                money.append(random.uniform(1.0, 100.0))
+                self.prov[0].append(name[a])
+                self.prov[1].append(recruits[a])
+                self.prov[2].append(money[a])
+                self.name_a = a
                 btn = Button(
                     self.root,
-                    text=name,
-                    command=lambda cx=x, cy=y, n=name: self.click_province(cx, cy, n),
+                    text=name[a],
+                    command=lambda n=name[a], cx=x, cy=y: self.click_province(n, cx, cy),
                     bg="#201F24",
                     fg="#FFFFFF",
                     font=("Times New Roman", 12)
                 )
                 btn.place(x=x + 10, y=y + 10, width=100, height=25)
                 self.province.append(btn)
+                a += 1
+    
+    def click_province(self):
+        name = self.prov[0]
+        recruits = self.prov[1]
+        money = self.prov[2]
+        cursor = self.connection.cursor()
+        cursor.execute(
+            "UPDATE provinces SET recruits = %s, money = %s WHERE name = %s",
+            (recruits[self.name_a], money[self.name_a], name[self.name_a])
+        )
+        self.connection.commit()
+        cursor.close()
 
-    def insert_db(self, name):
-        if not self.connection or not self.connection.is_connected():
-            print("Нет подключения к БД")
-            return
-
-        try:
-            cursor = self.connection.cursor()
-            cursor.execute("SELECT id FROM provinces WHERE name = %s", (name,))
-
-            if cursor.fetchone() is None:
-                recruits = random.randint(100, 10000)
-                money = round(random.uniform(1.0, 100.0), 2)
-                cursor.execute(
-                    "INSERT INTO provinces (name, recruits, money) VALUES (%s, %s, %s)",
-                    (name, recruits, money)
-                )
-                self.connection.commit()
-                print(f"Успешно сохранено: {name}")
-            else:
-                print(f"{name} уже есть в базе данных")
-
-            cursor.close()
-        except mysql.connector.Error as e:
-            print("Ошибка при работе с запросом: ", e)
+        self.cells.delete("info")
+        self.cells.create_text(
+            59, 75,
+            text=f"{name}\n{recruits}\n{money}",
+            fill="#FFFFFF",
+            font=("Times New Roman", 10),
+            justify="center",
+            tags="info"
+        )
 
 
 def main():
     root = Tk()
     app = World(root)
+    app.database_create()
+    app.insert_db()
     app.square()
     app.button()
+    app.click_province()
     root.mainloop()
 
 
