@@ -5,7 +5,7 @@ import mysql.connector
 
 load_dotenv(find_dotenv())
 
-TOTAL_CELLS = 16 * 9  # столько клеток в сетке 1920x1080 при шаге 120
+TOTAL_CELLS = 16 * 9
 
 
 def connect():
@@ -75,7 +75,7 @@ def delete_all(conn):
         print("Отменено.")
         return
     cursor = conn.cursor()
-    cursor.execute("TRUNCATE TABLE provinces")  # очищает и сбрасывает счётчик id на 1
+    cursor.execute("TRUNCATE TABLE provinces")
     conn.commit()
     cursor.close()
     print("Таблица очищена.")

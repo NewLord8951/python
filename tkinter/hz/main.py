@@ -122,12 +122,10 @@ class World:
             self.connection.close()
         self.root.destroy()
 
-
 def main():
     root = Tk()
     World(root)
     root.mainloop()
-
 
 if __name__ == "__main__":
     main()
