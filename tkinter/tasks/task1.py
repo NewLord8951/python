@@ -23,10 +23,8 @@ def main():
 
     entry = ttk.Label(r, text="")
     entry.grid(row=3, column=1, pady=10, sticky="e")
-    button = ttk.Button(r, text="Показать", command=lambda: entry.config(text=f"{name.get().strip()} {group.get().strip()}"),
-    )
+    button = ttk.Button(r, text="Показать", command=lambda: entry.config(text=f"{name.get().strip()} {group.get().strip()}"))
     button.grid(row=3, column=2, pady=10, sticky="w")
-    
 
     r.mainloop()
 
