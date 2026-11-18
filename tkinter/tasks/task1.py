@@ -1,4 +1,4 @@
-from tkinter import Tk, ttk
+from tkinter import Tk, ttk, Toplevel
 
 def main():
     r = Tk()
@@ -9,6 +9,14 @@ def main():
     r.rowconfigure([5, 2], weight=1)
     r.columnconfigure([0, 3], weight=1)
     r.rowconfigure([3, 2], weight=2)
+
+    w = Toplevel(r)
+    w.title("Окно")
+    w.geometry("200x150")
+    w.withdraw()
+
+    label_w = ttk.Label(w, text=f"")
+    label_w.grid(row=0, column=2, pady=20, padx=50, sticky="w")
 
     name_lable = ttk.Label(r, text="Имя:")
     name_lable.grid(row=1, column=1, padx=(0, 8))
@@ -21,10 +29,11 @@ def main():
     group = ttk.Combobox(r, values=group_s, state='readonly')
     group.grid(row=2, column=2)
 
-    entry = ttk.Label(r, text="")
-    entry.grid(row=3, column=1, pady=10, sticky="e")
-    button = ttk.Button(r, text="Показать", command=lambda: entry.config(text=f"{name.get().strip()} {group.get().strip()}"))
+    button = ttk.Button(r, text="Показать", command=lambda: (label_w.config(text=f"{name.get().strip()} {group.get().strip()}"), w.deiconify()))
     button.grid(row=3, column=2, pady=10, sticky="w")
+
+    d_button = ttk.Button(w, text="Закрыть", command=w.withdraw)
+    d_button.grid(row=1, column=2, pady=10, padx=50)
 
     r.mainloop()
 
